@@ -1,0 +1,82 @@
+.app-header.ant-layout-header {
+  background-color: rgb(255, 255, 255);
+  padding: 0 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  font-weight: 300;
+  font-size: 1.2rem;
+
+  position: relative;
+  .logo {
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+.right-side {
+  height: 100%;
+  display: flex;
+  gap: 20px;
+
+  .lists {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    gap: 20px;
+
+    a {
+      color: black;
+    }
+
+    .active-link {
+      position: relative;
+      color: blueviolet;
+    }
+  }
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  .anticon {
+    color: black !important;
+    position: relative;
+  }
+  .cart-total-items {
+    position: absolute;
+    top: 10%;
+    left: 99.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(58, 86, 116);
+    width: 1.5rem;
+    height: 1.5rem;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    font-size: 15px;
+  }
+}
+
+.menu-icon {
+  position: absolute;
+  right: -10%;
+  z-index: 9999;
+  display: none !important;
+
+  @media screen and (max-width: 800px) {
+    display: block !important;
+  }
+}
+
+.sidebar {
+  position: absolute;
+  right: -100%;
+}

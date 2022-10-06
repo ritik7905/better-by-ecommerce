@@ -1,0 +1,9 @@
+export const Home_Page = "/";
+export const About_Page = "/about";
+export const Contact_Page = "/contact";
+export const Shop_Page = "/shop";
+export const Sale_Page = "/sale";
+export const Blogs_Page = "/blogs";
+export const Blogs_Details = "/blog-details";
+export const Cart_Page = "/cart";
+export const Page_Not_Found = "/*";
