@@ -1,5 +1,5 @@
 .app-header.ant-layout-header {
-  background-color: rgb(255, 255, 255);
+  background-color: #eef1ff;
   padding: 0 10px;
 }
 
@@ -11,72 +11,83 @@
   font-weight: 300;
   font-size: 1.2rem;
 
-  position: relative;
-  .logo {
-    img {
-      width: 100px;
-      height: 100px;
-    }
+  img {
+    width: 100px;
+    height: auto;
   }
 }
-.right-side {
-  height: 100%;
+
+.lists {
+  margin: 0;
   display: flex;
-  gap: 20px;
+  gap: 2.5rem;
 
-  .lists {
-    display: flex;
-    margin: 0;
-    align-items: center;
-    gap: 20px;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 
-    a {
-      color: black;
-    }
-
-    .active-link {
-      position: relative;
+  a {
+    color: black;
+    font-weight: 400;
+    &:hover {
       color: blueviolet;
     }
   }
-}
 
-.auth {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  .anticon {
-    color: black !important;
+  .active {
+    color: rgb(104, 9, 177);
+    font-weight: bold;
+  }
+
+  .login-link {
+    background-color: #6454f4;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    &:hover {
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  .cart-trolley {
     position: relative;
   }
   .cart-total-items {
     position: absolute;
-    top: 10%;
-    left: 99.5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(58, 86, 116);
-    width: 1.5rem;
-    height: 1.5rem;
-    color: rgb(255, 255, 255);
+    transform: translate(15px, -55px);
+    color: white;
+    font-size: 13px;
     border-radius: 50%;
-    font-size: 15px;
+    background-color: rgb(0, 0, 0);
+    width: 1.25rem;
+    height: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
-.menu-icon {
-  position: absolute;
-  right: -10%;
-  z-index: 9999;
-  display: none !important;
+.mobile-navbar-btn {
+  display: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
 
   @media screen and (max-width: 800px) {
-    display: block !important;
-  }
-}
+    display: inline-block;
+    z-index: 9999;
 
-.sidebar {
-  position: absolute;
-  right: -100%;
+    .mobile-nav-icon {
+      font-size: 2.5rem;
+    }
+  }
+
+  .mobile-nav-icon[name="close-outline"] {
+    display: none;
+  }
+
+  .close-outline {
+    display: none;
+  }
 }
