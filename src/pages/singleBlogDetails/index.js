@@ -1,9 +1,9 @@
 import React from 'react'
 
-const SingleProductDetails = () => {
+const SingleBlogDetails = () => {
     return (
         <div>SingleProductDetails</div>
     )
 }
 
-export default SingleProductDetails
+export default SingleBlogDetails

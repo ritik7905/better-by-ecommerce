@@ -1,19 +1,26 @@
 .app-header.ant-layout-header {
-  background-color: #eef1ff;
-  padding: 0 10px;
+  background: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
 }
 
-.navbar {
+.app-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100%;
   font-weight: 300;
   font-size: 1.2rem;
 
-  img {
-    width: 100px;
-    height: auto;
+  .logo-link {
+    text-decoration: none;
+    h2 {
+      color: black;
+      span {
+        color: #e65540;
+      }
+    }
   }
 }
 
@@ -22,32 +29,22 @@
   display: flex;
   gap: 2.5rem;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     display: none;
   }
 
   a {
     color: black;
     font-weight: 400;
+    text-decoration: none;
     &:hover {
-      color: blueviolet;
+      color: #e65540;
     }
   }
 
   .active {
-    color: rgb(104, 9, 177);
+    color: #e65540;
     font-weight: bold;
-  }
-
-  .login-link {
-    background-color: #6454f4;
-    border-radius: 5px;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    &:hover {
-      color: rgb(255, 255, 255);
-    }
   }
 
   .cart-trolley {
@@ -74,7 +71,7 @@
   cursor: pointer;
   border: none;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
     display: inline-block;
     z-index: 9999;
 
@@ -82,12 +79,54 @@
       font-size: 2.5rem;
     }
   }
+}
 
-  .mobile-nav-icon[name="close-outline"] {
-    display: none;
-  }
-
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+  padding: 1rem;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(100%);
+  align-items: flex-end;
+  flex-direction: column;
+  background-color: red;
   .close-outline {
-    display: none;
+    position: absolute;
+    top: 10px;
   }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    li {
+      cursor: pointer;
+      transition: all 0.5s;
+
+      a {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}
+.active-sidebar {
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
 }

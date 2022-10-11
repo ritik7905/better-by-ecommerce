@@ -1,0 +1,68 @@
+.hero-crousel {
+  .carousel_img {
+    width: 100%;
+    max-height: 600px;
+    overflow: hidden;
+    text-align: center;
+
+    img {
+      max-height: 600px;
+      text-align: center;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .carousel {
+    width: 100%;
+  }
+
+  .carousel-indicators {
+    display: none;
+  }
+
+  .carousel-inner {
+    position: relative;
+
+    .carousel-caption {
+      width: 100%;
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .collection-year {
+    font-size: 18px;
+    color: white;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    font-weight: 500;
+
+    @media screen and (max-width: 450px) {
+      font-size: 16px;
+    }
+  }
+  .upcoming-events {
+    font-size: 60px;
+    color: white;
+    line-height: 1.2;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    @media screen and (max-width: 450px) {
+      font-size: 40px;
+    }
+  }
+
+  .shop-btn {
+    background-color: white;
+    color: black;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: none;
+    &:hover {
+      background-color: #e65540;
+    }
+  }
+}
