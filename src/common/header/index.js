@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Layout } from "antd";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { CgMenu } from "react-icons/cg";
 import { GrClose } from "react-icons/gr";
+import { motion } from 'framer-motion'
 import {
     About_Page,
     Blogs_Page,
@@ -24,12 +25,34 @@ const AppHeader = () => {
 
     const [toggle, setToggle] = useState(false)
 
+    const [navbg, setNavBg] = useState(false)
+
+
+
+    useEffect(() => {
+
+        window.onscroll = () => {
+
+            if (window.scrollY > 5) {
+                setNavBg(true)
+            } else {
+
+                setNavBg(false)
+            }
+        }
+
+    }, [])
+
+
+
     return (
-        <Header className="app-header">
+        <Header className={navbg ? "active-nav-bg" : "app-header"}>
             <nav className="app-navbar container active">
-                <NavLink to={Home_Page} className="logo-link">
-                    <h2>Be <span>Better</span></h2>
-                </NavLink>
+                <motion.div whileInView={{ y: [-50, 0] }} viewport={{ once: true }} transition={{ duration: 1.5, ease: "backInOut" }}>
+                    <NavLink to={Home_Page} className="logo-link">
+                        <h2>Be <span>Better</span></h2>
+                    </NavLink>
+                </motion.div>
                 <ul className="lists">
                     <li>
                         <NavLink to={Home_Page} className={(props) => props.isActive ? "active" : ""}>
@@ -130,7 +153,7 @@ const AppHeader = () => {
 
                 </div>
             </nav>
-        </Header>
+        </Header >
     );
 };
 

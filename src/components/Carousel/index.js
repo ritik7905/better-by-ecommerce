@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button, Carousel } from 'react-bootstrap';
 import { images } from '../../assets/images';
+import { motion } from "framer-motion"
 // styles
 import "./style.scss"
 
@@ -9,7 +10,7 @@ const HeroCarusel = () => {
     return (
         <div className="hero-crousel">
             <Carousel>
-                <Carousel.Item interval={1000}>
+                <Carousel.Item interval={5000}>
                     <div className="carousel_img">
                         <img
                             className="d-block w-100 img-fluid"
@@ -17,13 +18,14 @@ const HeroCarusel = () => {
                             alt="First slide"
                         />
                     </div>
+                    <div className="overlay"></div>
                     <Carousel.Caption>
-                        <h3 className='collection-year'>Women Collection 2022</h3>
-                        <h2 className='upcoming-events'>NEW ARRIVALS</h2>
-                        <Button className='shop-btn'>SHOP NOW</Button>
+                        <motion.h3 className='collection-year' whileInView={{ y: [-200, 0] }} transition={{ duration: 1.2, ease: "backInOut" }}>Women Collection 2022</motion.h3>
+                        <motion.h2 className='upcoming-events' whileInView={{ y: [200, 0] }} transition={{ duration: 1.5, ease: "backInOut" }}>NEW ARRIVALS</motion.h2>
+                        <motion.button whileInView={{ x: [-500, 0], opacity: [0, 0.5, 1] }} transition={{ duration: 1.5, ease: "anticipate" }} className='shop-btn'>SHOP NOW</motion.button>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item interval={1000}>
+                <Carousel.Item interval={5000}>
                     <div className="carousel_img">
                         <img
                             className="d-block w-100 img-fluid"
@@ -31,13 +33,14 @@ const HeroCarusel = () => {
                             alt="First slide"
                         />
                     </div>
+                    <div className="overlay"></div>
                     <Carousel.Caption>
-                        <h3 className='collection-year'>Women Collection 2022</h3>
-                        <h2 className='upcoming-events'>NEW ARRIVALS</h2>
-                        <Button className='shop-btn'>SHOP NOW</Button>
+                        <motion.h3 className='collection-year' whileInView={{ y: [-200, 0] }} transition={{ duration: 1.2, ease: "backInOut" }}>Women Collection 2022</motion.h3>
+                        <motion.h2 className='upcoming-events' whileInView={{ y: [200, 0] }} transition={{ duration: 1.5, ease: "backInOut" }}>NEW ARRIVALS</motion.h2>
+                        <motion.button whileInView={{ x: [-500, 0], opacity: [0, 0.5, 1] }} transition={{ duration: 1.5, ease: "anticipate" }} className='shop-btn'>SHOP NOW</motion.button>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item interval={1000}>
+                <Carousel.Item interval={5000}>
                     <div className="carousel_img">
                         <img
                             className="d-block w-100 img-fluid"
@@ -45,10 +48,11 @@ const HeroCarusel = () => {
                             alt="First slide"
                         />
                     </div>
+                    <div className="overlay"></div>
                     <Carousel.Caption>
-                        <h3 className='collection-year'>Women Collection 2022</h3>
-                        <h2 className='upcoming-events'>NEW ARRIVALS</h2>
-                        <Button className='shop-btn'>SHOP NOW</Button>
+                        <motion.h3 className='collection-year' whileInView={{ y: [200, 0] }} transition={{ duration: 1.2, ease: "backInOut" }}>Women Collection 2022</motion.h3>
+                        <motion.h2 className='upcoming-events' whileInView={{ y: [-200, 0] }} transition={{ duration: 1.5, ease: "backInOut" }}>NEW ARRIVALS</motion.h2>
+                        <motion.button whileInView={{ x: [500, 0], opacity: [0, 0.5, 1] }} transition={{ duration: 1.5, ease: "anticipate" }} className='shop-btn'>SHOP NOW</motion.button>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

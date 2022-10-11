@@ -1,9 +1,13 @@
 .app-header.ant-layout-header {
   background: transparent;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 9999;
   width: 100%;
+}
+
+.active-nav-bg.ant-layout-header {
+  background-color: red;
 }
 
 .app-navbar {
@@ -16,7 +20,7 @@
   .logo-link {
     text-decoration: none;
     h2 {
-      color: black;
+      color: rgb(255, 255, 255);
       span {
         color: #e65540;
       }
@@ -34,7 +38,7 @@
   }
 
   a {
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: 400;
     text-decoration: none;
     &:hover {

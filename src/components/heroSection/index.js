@@ -1,9 +1,11 @@
 import React from 'react'
 import HeroCarusel from '../Carousel'
+// styles
+import "./style.scss"
 
 const HeroSection = () => {
     return (
-        <div className='apphero-carousel'>
+        <div className='app-hero-carousel'>
             <HeroCarusel />
 
         </div>
