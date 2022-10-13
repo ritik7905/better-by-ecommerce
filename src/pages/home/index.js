@@ -31,7 +31,6 @@ const Home = () => {
                         adaptiveHeight: true,
                         autoPlay: true,
                         pauseAutoPlayOnHover: true,
-
                     }}
                 >
                     {

@@ -7,7 +7,6 @@ const HeroSection = () => {
     return (
         <div className='app-hero-carousel'>
             <HeroCarusel />
-
         </div>
     )
 }
