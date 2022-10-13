@@ -1,4 +1,140 @@
+@import "../../styles/variables/colors";
+
 .home-page {
-  background-color: white;
   position: relative;
+}
+
+.grid-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 0;
+}
+.product-card {
+  max-width: 400px;
+  cursor: pointer;
+  border: none !important;
+  height: auto;
+  padding: 0;
+  .product-details {
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100%;
+      transition: all 0.7s;
+      height: 100%;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .card-title {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    background: transparent;
+
+    a {
+      text-decoration: none;
+      background-color: white;
+      color: $text-secondary;
+      text-transform: uppercase;
+      padding: 10px 70px;
+      border-radius: 5px;
+      font-weight: 400;
+      letter-spacing: 5px;
+      &:hover {
+        background-color: #e65540;
+        color: white;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+}
+
+.product-slider {
+  padding: 50px 0;
+  .featured-title {
+    font-size: 30px;
+    text-align: center;
+    color: #222222;
+    line-height: 1.2;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+.carousel.container {
+  padding: 50px 0;
+  &:focus-visible {
+    outline: none;
+  }
+  .carousel-cell {
+    width: 20%;
+    height: 100%;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding-right: 15px;
+
+    .slider-img {
+      width: 100%;
+      height: 400px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .card-details {
+      display: flex;
+      flex-direction: column;
+      a {
+        text-decoration: none;
+        font-size: 18px;
+        color: $text-secondary;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+
+      span {
+        font-size: 18px;
+        color: $text-primary;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  .flickity-prev-next-button.previous {
+    background: transparent;
+    left: -60px;
+    .flickity-button-icon {
+      color: $text-gray;
+      &:hover {
+        transition: all 0.5s ease-in-out;
+        color: $theme-primary;
+      }
+    }
+  }
+
+  .flickity-prev-next-button.next {
+    background: transparent;
+    right: -60px;
+    .flickity-button-icon {
+      color: $text-gray;
+      &:hover {
+        transition: all 0.5s ease-in-out;
+        color: $theme-primary;
+      }
+    }
+  }
+  .flickity-viewport {
+    padding: 20px 0;
+    width: 100%;
+    height: 500px !important;
+  }
 }

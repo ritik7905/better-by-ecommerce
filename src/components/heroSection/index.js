@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroCarusel from '../Carousel'
+import HeroCarusel from '../carousel'
 // styles
 import "./style.scss"
 

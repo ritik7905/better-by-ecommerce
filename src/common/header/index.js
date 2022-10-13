@@ -48,7 +48,7 @@ const AppHeader = () => {
     return (
         <Header className={navbg ? "active-nav-bg" : "app-header"}>
             <nav className="app-navbar container active">
-                <motion.div whileInView={{ y: [-50, 0] }} viewport={{ once: true }} transition={{ duration: 1.5, ease: "backInOut" }}>
+                <motion.div whileInView={{ y: [-50, 0], opacity: [0, 0.5, 1] }} viewport={{ once: true }} transition={{ duration: 1.5, ease: "backInOut" }}>
                     <NavLink to={Home_Page} className="logo-link">
                         <h2>Be <span>Better</span></h2>
                     </NavLink>
@@ -67,11 +67,6 @@ const AppHeader = () => {
                     <li>
                         <NavLink to={Sale_Page} className={(props) => props.isActive ? "active" : ""}>
                             Sale
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={Features_Page} className={(props) => props.isActive ? "active" : ""}>
-                            Features
                         </NavLink>
                     </li>
                     <li>

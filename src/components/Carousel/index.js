@@ -37,7 +37,7 @@ const HeroCarusel = () => {
                     <Carousel.Caption>
                         <motion.h3 className='collection-year' whileInView={{ y: [-200, 0] }} transition={{ duration: 1.2, ease: "backInOut" }}>Women Collection 2022</motion.h3>
                         <motion.h2 className='upcoming-events' whileInView={{ y: [200, 0] }} transition={{ duration: 1.5, ease: "backInOut" }}>NEW ARRIVALS</motion.h2>
-                        <motion.button whileInView={{ x: [-500, 0], opacity: [0, 0.5, 1] }} transition={{ duration: 1.5, ease: "anticipate" }} className='shop-btn'>SHOP NOW</motion.button>
+                        <motion.button whileInView={{ y: [200, 0], opacity: [0, 0.5, 1] }} transition={{ duration: 1.5, ease: "anticipate" }} className='shop-btn'>SHOP NOW</motion.button>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={5000}>
