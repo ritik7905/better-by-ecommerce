@@ -11,11 +11,21 @@ import cloths_sets from "./images/cloths-sets.jpg"
 import collection from "./images/collection.jpg"
 import leather_bag from "./images/leather-bag.jpg"
 import winter_suit from "./images/winter-jacket.jpg"
+import white_furr from "./images/white-furr.webp"
+import spacks from "./images/spacks.webp"
+import bag_blog_img from "./images/bag_blog_img.webp"
+import red_bag from "./images/red_bag.webp"
+import sleeves_hood_img from "./images/sleeves_hood_img.webp"
 
 
 
 export const images = {
     hero_1,
+    white_furr,
+    bag_blog_img,
+    red_bag,
+    sleeves_hood_img,
+    spacks,
     hero_2,
     hero_3,
     black_hood,

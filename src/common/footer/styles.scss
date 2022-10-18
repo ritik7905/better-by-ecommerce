@@ -1,0 +1,62 @@
+@import "../../styles/variables/colors";
+
+.app-footer {
+  padding: 50px 0;
+}
+
+.app-footer-content {
+  .footer-container {
+    justify-content: center;
+    gap: 20px;
+
+    .col-data {
+      display: flex;
+      flex-direction: column;
+
+      .footer-title {
+        font-size: 19px;
+      }
+
+      .company-description {
+        font-size: 16px;
+        font-weight: 400;
+      }
+      .category-lists {
+        padding: 0;
+
+        li {
+          font-size: 15px;
+          margin-bottom: 20px;
+          font-weight: 400;
+          color: $text-secondary;
+        }
+      }
+
+      .email-input {
+        .ant-input {
+          border: none;
+          box-shadow: none;
+          background-color: transparent;
+          border-bottom: 1px solid $text-primary;
+          caret-color: $text-primary;
+          width: 100%;
+        }
+      }
+      .subscribe-btn {
+        margin-top: 20px;
+        .ant-btn {
+          border: none;
+          height: 50px;
+          width: 70%;
+          border-radius: 5px;
+          background-color: $text-title;
+          color: white;
+          &:hover {
+            border-radius: 10px;
+            background-color: $text-primary;
+          }
+        }
+      }
+    }
+  }
+}

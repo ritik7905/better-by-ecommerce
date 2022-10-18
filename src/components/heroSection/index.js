@@ -9,7 +9,7 @@ import "./style.scss"
 const HeroSection = () => {
     return (
         <div className='app-hero-carousel'>
-            <div className="hero-crousel">
+            <div className="hero-carousel">
                 <Carousel>
                     <Carousel.Item interval={5000}>
                         <div className="carousel_img">
@@ -58,6 +58,8 @@ const HeroSection = () => {
                     </Carousel.Item>
                 </Carousel>
             </div>
+
+
         </div>
     )
 }
