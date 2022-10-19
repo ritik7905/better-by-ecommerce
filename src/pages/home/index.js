@@ -34,12 +34,25 @@ const Home = () => {
                             asNavFor: ".carousel-main",
                             contain: true,
                             pageDots: false,
-                            freeScroll: false,
+                            cellAlign: "left",
+                            freeScroll: true,
                             wrapAround: true,
                             groupCells: 3,
                             adaptiveHeight: true,
                             autoPlay: true,
                             pauseAutoPlayOnHover: true,
+                            responsive: [
+                                {
+                                    breakpoint: 1024,
+                                    settings: {
+                                        wrapAround: true,
+                                        cellAlign: "center",
+                                        freeScroll: false,
+                                        prevNextButtons: false,
+                                        pageDots: false
+                                    }
+                                }
+                            ]
                         }}
                     >
                         {

@@ -40,8 +40,10 @@
           border-bottom: 1px solid $text-primary;
           caret-color: $text-primary;
           width: 100%;
+          padding: 10px 2px;
         }
       }
+
       .subscribe-btn {
         margin-top: 20px;
         .ant-btn {

@@ -56,7 +56,7 @@ const AppFooter = () => {
                         <div className="col-data">
                             <Title level={4} className="footer-title">NEWSLETTER</Title>
                             <div className="email-input">
-                                <Input type='email' />
+                                <Input type='email' placeholder="email@example.com" />
                             </div>
                             <div className='subscribe-btn'>
                                 <Button>SUBSCRIBE</Button>
