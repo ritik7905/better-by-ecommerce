@@ -6,6 +6,8 @@ import App from './App';
 import 'antd/dist/antd.min.css'; // or 'antd/dist/antd.less'
 import { Provider } from 'react-redux';
 import { store } from './redux/store';// App-Store
+
+import { ScrollToTop } from "./components/allComponentsTogether"
 // styles
 // ========================
 import "./styles/index.scss"
@@ -17,6 +19,7 @@ const root = createRoot(container);
 root.render(
   <React.StrictMode>
     <Router>
+      <ScrollToTop />
       <Provider store={store}>
         <App />
       </Provider>

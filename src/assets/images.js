@@ -16,12 +16,14 @@ import spacks from "./images/spacks.webp"
 import bag_blog_img from "./images/bag_blog_img.webp"
 import red_bag from "./images/red_bag.webp"
 import sleeves_hood_img from "./images/sleeves_hood_img.webp"
+import cover_img from "./images/cover-img.jpg"
 
 
 
 export const images = {
     hero_1,
     white_furr,
+    cover_img,
     bag_blog_img,
     red_bag,
     sleeves_hood_img,
