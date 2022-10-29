@@ -1,14 +1,8 @@
+@import "../../styles/variables/colors";
 .app-header.ant-layout-header {
-  background: transparent;
-  position: fixed;
-  top: 0;
-  z-index: 9999;
+  background: white;
   width: 100%;
 }
-
-// .active-nav-bg.ant-layout-header {
-//   background-color: red;
-// }
 
 .app-navbar {
   display: flex;
@@ -20,9 +14,10 @@
   .logo-link {
     text-decoration: none;
     h2 {
-      color: rgb(255, 255, 255);
+      color: $text-secondary;
+      font-weight: bold;
       span {
-        color: #e65540;
+        color: $text-primary;
       }
     }
   }
@@ -38,16 +33,16 @@
   }
 
   a {
-    color: rgb(255, 255, 255);
+    color: $text-secondary;
     font-weight: 400;
     text-decoration: none;
     &:hover {
-      color: #e65540;
+      color: $text-primary;
     }
   }
 
   .active {
-    color: #e65540;
+    color: $text-primary;
     font-weight: bold;
   }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 // styles
 import "./styles.scss"
 import { HeroSection, ProductCard } from "../../components/allComponentsTogether"
@@ -7,13 +7,17 @@ import Flickity from "react-flickity-component";
 import { data } from './data';
 import { blogData } from './data';
 import { Card, Col, Row, Typography } from 'antd';
+import { AppContext, useProductContext } from '../../context/productContext';
+import { Link } from 'react-router-dom';
 
 
 // Object-destructured
-const { Meta } = Card;
 const { Title, Paragraph } = Typography
 
 const Home = () => {
+
+    const name = useProductContext()
+    console.log(name);
 
     return (
         <section className='home-page'>
@@ -59,13 +63,15 @@ const Home = () => {
                             data.map((item, index) => {
                                 return (
                                     <div className="carousel-cell" key={index}>
-                                        <div className="slider-img">
-                                            <img src={item.img} alt="product_img" />
-                                        </div>
-                                        <div className="card-details">
-                                            <a href="#">{item.productTitle}</a>
-                                            <span>{item.productPrice}</span>
-                                        </div>
+                                        <Link to="/">
+                                            <div className="slider-img">
+                                                <img src={item.img} alt="product_img" />
+                                            </div>
+                                            <div className="card-details">
+                                                <a href="#">{item.productTitle}</a>
+                                                <span>{item.productPrice}</span>
+                                            </div>
+                                        </Link>
                                     </div>
                                 )
                             })
@@ -124,7 +130,7 @@ const Home = () => {
                         <Row className="sample-blog-cards" gutter={[10, 50]}>
                             {blogData.map((item, i) => {
                                 return (
-                                    <Col md={{ span: 8, }} sm={{ span: 12, }} xs={{ span: 24, }}>
+                                    <Col md={{ span: 8, }} sm={{ span: 12, }} xs={{ span: 24, }} key={i}>
                                         <Card bordered={false}
                                             cover={
                                                 <img

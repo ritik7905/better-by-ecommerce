@@ -1,9 +1,8 @@
 export const Home_Page = "/";
 export const Shop_Page = "/shop";
-export const Sale_Page = "/sale";
-export const Features_Page = "/features";
 export const Blogs_Page = "/blogs";
 export const blog_Details = "/blog-details";
+export const product_Details = "/product-details";
 export const About_Page = "/about";
 export const Contact_Page = "/contact";
 export const Cart_Page = "/cart";

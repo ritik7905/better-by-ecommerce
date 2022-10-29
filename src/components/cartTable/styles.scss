@@ -1,0 +1,74 @@
+@import "../../styles/variables/colors";
+
+.my-table {
+  max-width: 80%;
+  margin: 0 auto;
+  box-shadow: $primary-shadow;
+}
+
+.cart-table-header {
+  .table-head-row {
+    .column {
+      text-align: justify;
+      font-weight: 800;
+      font-size: 20px;
+    }
+  }
+}
+
+.cart-table-content {
+  .table-body-row {
+    .column {
+      text-align: justify;
+    }
+    .column-1 {
+      width: 225px;
+      line-height: 1.5;
+      padding: 37px 0 30px 50px;
+
+      .cart-img-product {
+        width: 90px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .column-2 {
+      width: 330px;
+      padding: 37px 30px 30px;
+    }
+
+    .column-3 {
+      width: 133px;
+      padding: 37px 30px 30px 0;
+    }
+    .column-4 {
+      width: 355px;
+      padding: 37px 30px 30px 0;
+      .product-counter {
+        display: flex;
+        width: 138px;
+        border: 2px solid #e6e6e6;
+        border-radius: 3px;
+        button {
+          width: 42px;
+          height: 41px;
+          border: none;
+          width: 100%;
+          font-size: 20px;
+        }
+        .ant-input {
+          text-align: center;
+          line-height: 1.2;
+          outline: none;
+        }
+      }
+    }
+
+    .column-5 {
+      padding: 37px 30px 30px 0;
+    }
+  }
+}

@@ -10,9 +10,7 @@ import {
     Blogs_Page,
     Cart_Page,
     Contact_Page,
-    Features_Page,
     Home_Page,
-    Sale_Page,
     Shop_Page,
 } from "../routes";
 // styles
@@ -33,17 +31,14 @@ const AppHeader = () => {
 
         window.onscroll = () => {
 
-            if (window.scrollY > 5) {
+            if (window.screenY > 10) {
                 setNavBg(true)
             } else {
 
                 setNavBg(false)
             }
         }
-
-    }, [])
-
-
+    }, [navbg])
 
     return (
         <Header className={navbg ? "active-nav-bg" : "app-header"}>
@@ -60,28 +55,23 @@ const AppHeader = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={Shop_Page} className={(props) => props.isActive ? "active" : ""}>
+                        <NavLink to={Shop_Page}>
                             Shop
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={Sale_Page} className={(props) => props.isActive ? "active" : ""}>
-                            Sale
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={Blogs_Page} className={(props) => props.isActive ? "active" : ""}>
+                        <NavLink to={Blogs_Page}>
                             Blogs
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={About_Page} className={(props) => props.isActive ? "active" : ""}>
+                        <NavLink to={About_Page}>
                             About
                         </NavLink>
                     </li>
 
                     <li>
-                        <NavLink to={Contact_Page} className={(props) => props.isActive ? "active" : ""}>
+                        <NavLink to={Contact_Page}>
                             Contact
                         </NavLink>
                     </li>
@@ -108,16 +98,6 @@ const AppHeader = () => {
                             <li>
                                 <NavLink to={Shop_Page} className={(props) => props.isActive ? "active" : ""}>
                                     Shop
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to={Sale_Page} className={(props) => props.isActive ? "active" : ""}>
-                                    Sale
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to={Sale_Page} className={(props) => props.isActive ? "active" : ""}>
-                                    Features
                                 </NavLink>
                             </li>
                             <li>

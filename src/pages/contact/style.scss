@@ -1,0 +1,57 @@
+@import "../../styles/variables/colors";
+
+.contact-page {
+  position: relative;
+  background-color: white;
+
+  .container {
+    padding: 55px 0;
+
+    .contact-title {
+      font-size: 30px;
+      text-align: center;
+      color: $text-title;
+      line-height: 1.2;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.contact-row {
+  justify-content: space-between;
+  padding: 55px 0;
+
+  .contact-form {
+    padding-top: 50px;
+    h2 {
+      color: $text-title;
+      margin-bottom: 20px;
+    }
+
+    .ant-input {
+      padding: 10px 5px;
+      border-radius: 5px;
+      &:hover,
+      &:focus {
+        border-color: $text-secondary;
+        box-shadow: none;
+      }
+      &::placeholder {
+        color: $text-gray;
+        font-size: 17px;
+        letter-spacing: 2px;
+      }
+    }
+
+    .submit-form {
+      width: 100%;
+      border-radius: 5px;
+      height: 40px;
+      background-color: $theme-primary;
+      font-size: 18px;
+      border: none;
+    }
+  }
+}

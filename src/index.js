@@ -4,13 +4,12 @@ import { BrowserRouter as Router } from "react-router-dom";
 import App from './App';
 
 import 'antd/dist/antd.min.css'; // or 'antd/dist/antd.less'
-import { Provider } from 'react-redux';
-import { store } from './redux/store';// App-Store
 
 import { ScrollToTop } from "./components/allComponentsTogether"
 // styles
 // ========================
 import "./styles/index.scss"
+import { AppProvider } from './context/productContext';
 // ========================
 
 const container = document.getElementById('root');
@@ -20,9 +19,9 @@ root.render(
   <React.StrictMode>
     <Router>
       <ScrollToTop />
-      <Provider store={store}>
+      <AppProvider>
         <App />
-      </Provider>
+      </AppProvider>
     </Router>
   </React.StrictMode>
 );

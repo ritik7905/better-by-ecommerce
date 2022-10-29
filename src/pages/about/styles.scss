@@ -1,0 +1,56 @@
+@import "../../styles/variables/colors";
+
+.about-page {
+  position: relative;
+  background-color: white;
+}
+
+.about-content {
+  .page-intro-header {
+    background-image: url("../../assets/images/about-header.jpg");
+    background-position: center;
+  }
+}
+
+.about-data {
+  padding: 65px 0;
+  .our-story {
+    .responsive {
+      max-width: 80%;
+      height: auto;
+    }
+  }
+
+  .right-side {
+    .story-title {
+      font-size: 25px;
+      font-weight: 500;
+      color: $text-secondary;
+      line-height: 1.2;
+    }
+  }
+}
+
+.my-bio {
+  .description {
+    font-size: 20px;
+    line-height: 1.7;
+    color: $text-gray;
+    margin: 0px;
+  }
+
+  .thought {
+    .description {
+      padding-top: 30px;
+    }
+
+    .name {
+      padding: 40px 0;
+      span {
+        font-size: 20px;
+        font-weight: 500;
+        color: $text-primary;
+      }
+    }
+  }
+}

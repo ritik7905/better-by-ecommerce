@@ -9,6 +9,8 @@ import { PageIntroHeader, ProductCard } from "../../components/allComponentsToge
 import "./styles.scss"
 import { Button, Input } from 'antd';
 import { data } from './data';
+import { Link } from 'react-router-dom';
+import { product_Details } from '../../common/routes';
 // ============================
 
 const { Title } = Typography
@@ -114,30 +116,30 @@ const Shop = () => {
                             </Row>
 
                             <Row className="categories-wise-product-container" gutter={20}>
-                                {data.map((item, i) => {
+                                {data.map((item) => {
                                     return (
-                                        <Col key={i} sm={24} md={12} lg={8} className="card">
-                                            <div className="product-card">
-                                                <div className="slider-img">
-                                                    <img src={item.img} alt="product_img" />
+                                        <Col sm={24} md={12} lg={8} className="card" key={item.id
+                                        }>
+                                            <Link to={`${product_Details}/${item.id}`}>
+                                                <div className="product-card">
+                                                    <div className="slider-img">
+                                                        <img src={item.img} alt="product_img" />
+                                                    </div>
+                                                    <div className="product-details">
+                                                        <a href="#">{item.productTitle}</a>
+                                                        <span>{item.productPrice}</span>
+                                                    </div>
                                                 </div>
-                                                <div className="product-details">
-                                                    <a href="#">{item.productTitle}</a>
-                                                    <span>{item.productPrice}</span>
-                                                </div>
-                                            </div>
+                                            </Link>
                                         </Col>
-
                                     )
                                 })}
-
                             </Row>
                         </Col>
-
                     </Row>
                 </div>
-            </div>
-        </section>
+            </div >
+        </section >
     )
 }
 
