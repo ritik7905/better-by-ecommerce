@@ -12,7 +12,7 @@ const API = "https://api.pujakaitem.com/api/products"
 
 const initialState = {
     isLoading: false,
-    isError: false.valueOf,
+    isError: false,
     products: [],
     featureProducts: []
 }
@@ -22,16 +22,17 @@ const AppProvider = ({ children }) => {
 
     const getProducts = async (URL) => {
 
+        dispatch({ type: "SET_LOADING" })
+
         // Get API Data
         try {
 
             const res = await axios.get(URL)
             const products = await res.data
 
-
             dispatch({ type: "MY_API_DATA", payload: products });
-        } catch (err) {
-            dispatch({ type: "API_ERROR", payload: err })
+        } catch (error) {
+            dispatch({ type: "API_ERROR", payload: error })
         }
     }
 
