@@ -1,23 +1,19 @@
-import React, { useContext } from 'react'
+import React from 'react'
+import { FeatureCard, HeroSection, Product, ProductCard } from "../../components/allComponentsTogether"
+import { images } from '../../assets/images'
+import { Col, Row, Typography } from 'antd';
+import { useProductContext } from '../../context/productContext';
+
 // styles
 import "./styles.scss"
-import { HeroSection, ProductCard } from "../../components/allComponentsTogether"
-import { images } from '../../assets/images'
-import Flickity from "react-flickity-component";
-import { data } from './data';
-import { blogData } from './data';
-import { Card, Col, Row, Typography } from 'antd';
-import { AppContext, useProductContext } from '../../context/productContext';
-import { Link } from 'react-router-dom';
-
 
 // Object-destructured
 const { Title, Paragraph } = Typography
 
 const Home = () => {
 
-    const name = useProductContext()
-    console.log(name);
+    const { isLoading, featureProducts } = useProductContext()
+    console.log(featureProducts);
 
     return (
         <section className='home-page'>
@@ -30,53 +26,22 @@ const Home = () => {
                     <ProductCard image_url={images.winter_suit} dress_name="Hello" />
                 </div>
 
-                <div className="product-slider">
+                <div className="product-slider container">
                     <h3 className='featured-title'>featured products</h3>
-                    <Flickity
-                        className="carousel container"
-                        options={{
-                            asNavFor: ".carousel-main",
-                            contain: true,
-                            pageDots: false,
-                            cellAlign: "left",
-                            freeScroll: true,
-                            wrapAround: true,
-                            groupCells: 3,
-                            adaptiveHeight: true,
-                            autoPlay: true,
-                            pauseAutoPlayOnHover: true,
-                            responsive: [
-                                {
-                                    breakpoint: 1024,
-                                    settings: {
-                                        wrapAround: true,
-                                        cellAlign: "center",
-                                        freeScroll: false,
-                                        prevNextButtons: false,
-                                        pageDots: false
-                                    }
-                                }
-                            ]
-                        }}
-                    >
-                        {
-                            data.map((item, index) => {
-                                return (
-                                    <div className="carousel-cell" key={index}>
-                                        <Link to="/">
-                                            <div className="slider-img">
-                                                <img src={item.img} alt="product_img" />
-                                            </div>
-                                            <div className="card-details">
-                                                <a href="#">{item.productTitle}</a>
-                                                <span>{item.productPrice}</span>
-                                            </div>
-                                        </Link>
-                                    </div>
-                                )
-                            })
-                        }
-                    </Flickity>
+
+                    <div className="featured-products">
+                        <div className="site-card-wrapper">
+                            <Row gutter={60} className="feature-product-row">
+                                {featureProducts?.map((item) => {
+                                    return (
+                                        <Col span={5}>
+                                            <Product key={item.id} featureList={item} />
+                                        </Col>
+                                    )
+                                })}
+                            </Row>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="sale-catalogue banner">
@@ -124,29 +89,6 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="home-blogs">
-                    <div className="our-blogs container">
-                        <h3 className='blog-title-heading'>Our Blogs</h3>
-                        <Row className="sample-blog-cards" gutter={[10, 50]}>
-                            {blogData.map((item, i) => {
-                                return (
-                                    <Col md={{ span: 8, }} sm={{ span: 12, }} xs={{ span: 24, }} key={i}>
-                                        <Card bordered={false}
-                                            cover={
-                                                <img
-                                                    alt="example"
-                                                    src={item.blog_thumbnail}
-                                                />
-                                            }>
-                                            <Title level={4} className="blog-title">{item.blog_title}</Title>
-                                            <Paragraph>{item.blog_details}</Paragraph>
-                                        </Card>
-                                    </Col>
-                                )
-                            })}
-                        </Row>
-                    </div>
-                </div>
             </div>
         </section>
     )

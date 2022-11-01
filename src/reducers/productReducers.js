@@ -15,7 +15,7 @@ const productReducers = (state, action) => {
             const featureProducts = action.payload.filter((curElm) => {
                 return curElm.featured === true
             })
-            console.log(featureProducts);
+            // console.log(featureProducts);
             return {
                 ...state,
                 isLoading: false,
@@ -32,10 +32,23 @@ const productReducers = (state, action) => {
                 isError: true
             }
 
+        case "SET_SINGLE_PRODUCT":
+            return {
+                ...state,
+                isSingleLoading: false,
+                isError: false,
+                singleProduct: action.payload
+            }
+
+        case "ERROR_SINGLE_PRODUCT":
+            return {
+                ...state,
+                isSingleLoading: false,
+                isError: true,
+            }
+
         default: return state
-
     }
-
 }
 
 export default productReducers

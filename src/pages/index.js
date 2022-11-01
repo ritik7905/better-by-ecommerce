@@ -1,8 +1,6 @@
 export { default as Home } from "./home"
 export { default as About } from "./about"
 export { default as Shop } from "./shop"
-export { default as BlogsPage } from "./blogs"
-export { default as SingleBlogDetails } from "./singleBlogDetails"
 export { default as SingleProductDetails } from "./singleProductDetails"
 export { default as Contact } from "./contact"
 export { default as PageNotFound } from "./NotFoundPage"

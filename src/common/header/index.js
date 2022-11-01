@@ -60,11 +60,6 @@ const AppHeader = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to={Blogs_Page}>
-                            Blogs
-                        </NavLink>
-                    </li>
-                    <li>
                         <NavLink to={About_Page}>
                             About
                         </NavLink>

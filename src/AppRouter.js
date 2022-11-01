@@ -19,8 +19,6 @@ const AppRouter = () => {
                 <Routes>
                     <Route exact path={Home_Page} element={<Home />} />
                     <Route path={Shop_Page} element={<Shop />} />
-                    <Route path={Blogs_Page} element={<BlogsPage />} />
-                    <Route path={`${blog_Details}/:id`} element={<SingleBlogDetails />} />
                     <Route path={`${product_Details}/:id`} element={<SingleProductDetails />} />
                     <Route path={About_Page} element={<About />} />
                     <Route path={Contact_Page} element={<Contact />} />

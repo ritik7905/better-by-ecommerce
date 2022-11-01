@@ -1,0 +1,41 @@
+@import "../../styles/variables/colors";
+
+.product-card {
+  box-shadow: $primary-shadow;
+
+  .ant-card-cover {
+    overflow: hidden;
+    img {
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .ant-card-body {
+    padding: 0;
+  }
+
+  .card-data {
+    padding: 10px 20px;
+    .card-data-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .card-name,
+      .card-price {
+        margin: 0;
+      }
+      .card-name {
+        font-size: 18px;
+        color: $text-secondary;
+      }
+      .card-price {
+        font-size: 16px;
+        color: $text-primary;
+        font-weight: 500;
+      }
+    }
+  }
+}

@@ -2,21 +2,22 @@ import React, { useState } from 'react';
 import { Col, Row, Typography, Select } from 'antd'
 import { Slider } from 'antd';
 import { BsSearch } from "react-icons/bs"
-import { PageIntroHeader, ProductCard } from "../../components/allComponentsTogether"
+import { PageIntroHeader, Product, ProductCard } from "../../components/allComponentsTogether"
 
 // styles
 // ============================
 import "./styles.scss"
 import { Button, Input } from 'antd';
-import { data } from './data';
 import { Link } from 'react-router-dom';
 import { product_Details } from '../../common/routes';
+import { useProductContext } from '../../context/productContext';
 // ============================
 
 const { Title } = Typography
 const { Option } = Select;
 const Shop = () => {
 
+    const { isLoading, products } = useProductContext()
     const [disabled, setDisabled] = useState(false);
 
     const [color, setColor] = useState("green");
@@ -116,21 +117,11 @@ const Shop = () => {
                             </Row>
 
                             <Row className="categories-wise-product-container" gutter={20}>
-                                {data.map((item) => {
+                                {products?.map((item) => {
                                     return (
                                         <Col sm={24} md={12} lg={8} className="card" key={item.id
                                         }>
-                                            <Link to={`${product_Details}/${item.id}`}>
-                                                <div className="product-card">
-                                                    <div className="slider-img">
-                                                        <img src={item.img} alt="product_img" />
-                                                    </div>
-                                                    <div className="product-details">
-                                                        <a href="#">{item.productTitle}</a>
-                                                        <span>{item.productPrice}</span>
-                                                    </div>
-                                                </div>
-                                            </Link>
+                                            <Product key={item.id} featureList={item} />
                                         </Col>
                                     )
                                 })}

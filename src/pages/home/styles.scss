@@ -73,80 +73,11 @@
   }
 }
 
-.carousel.container {
-  padding: 50px 0;
-  &:focus-visible {
-    outline: none;
-  }
-  .carousel-cell {
-    width: 20%;
-    height: 100%;
-    margin-right: 10px;
-    border-radius: 5px;
-    padding-right: 15px;
-
-    // responsive media
-
-    @media only screen and (max-width: 1024px) {
-      width: 70%;
-      max-width: 400px;
-    }
-
-    .slider-img {
-      width: 100%;
-      height: 400px;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    .card-details {
-      display: flex;
-      flex-direction: column;
-      a {
-        text-decoration: none;
-        font-size: 18px;
-        color: $text-secondary;
-        font-weight: 500;
-        line-height: 1.5;
-      }
-
-      span {
-        font-size: 18px;
-        color: $text-primary;
-        font-weight: 500;
-        line-height: 1.5;
-      }
-    }
-  }
-
-  .flickity-prev-next-button.previous {
-    background: transparent;
-    transform: translateX(-75px);
-    .flickity-button-icon {
-      color: $text-gray;
-      &:hover {
-        transition: all 0.5s ease-in-out;
-        color: $theme-primary;
-      }
-    }
-  }
-
-  .flickity-prev-next-button.next {
-    background: transparent;
-    transform: translateX(75px);
-    .flickity-button-icon {
-      color: $text-gray;
-      &:hover {
-        transition: all 0.5s ease-in-out;
-        color: $theme-primary;
-      }
-    }
-  }
-  .flickity-viewport {
-    padding: 20px 0;
-    width: 100%;
-    height: 500px !important;
+// featured-products
+.featured-products {
+  padding: 55px 0;
+  .feature-product-row {
+    justify-content: center;
   }
 }
 
@@ -290,35 +221,6 @@
         color: $text-gray;
         line-height: 1;
       }
-    }
-  }
-}
-
-// Blog_section
-
-.home-blogs {
-  padding: 55px 0;
-}
-
-.our-blogs {
-  .blog-title-heading {
-    font-size: 30px;
-    text-align: center;
-    color: $text-title;
-    line-height: 1.2;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-
-  .sample-blog-cards {
-    padding: 55px 0;
-
-    .ant-card-body {
-      padding: 10px;
-    }
-
-    .blog-title {
-      padding: 0;
     }
   }
 }
