@@ -15,6 +15,7 @@ const Home = () => {
     const { isLoading, featureProducts } = useProductContext()
     console.log(featureProducts);
 
+
     return (
         <section className='home-page'>
             <HeroSection />

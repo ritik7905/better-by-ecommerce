@@ -1,0 +1,15 @@
+@import "../../styles/variables/colors";
+
+.page-navigation {
+  background-color: #f7f8fb;
+  padding: 20px 10px;
+  a {
+    color: $text-primary;
+    font-weight: 500;
+    font-size: 20px;
+  }
+  span {
+    color: $text-secondary;
+    font-weight: 400;
+  }
+}
