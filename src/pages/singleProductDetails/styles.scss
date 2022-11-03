@@ -1,0 +1,18 @@
+@import "../../styles/variables/colors";
+
+.product-details-container {
+  padding: 100px 0;
+  .ant-row {
+    justify-content: center;
+  }
+}
+.product-info {
+  background-color: transparent;
+
+  .product-name {
+    color: $text-secondary;
+  }
+
+  .product-ratings {
+  }
+}

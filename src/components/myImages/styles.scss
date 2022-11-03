@@ -1,0 +1,26 @@
+@import "../../styles/variables/colors";
+
+.image-filter {
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#responsive {
+  width: 100%;
+}
+
+.images-row {
+  gap: 15px;
+  .product-img {
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+      box-shadow: $primary-shadow;
+    }
+    img {
+      border-radius: 10px;
+    }
+  }
+}
