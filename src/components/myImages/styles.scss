@@ -24,3 +24,13 @@
     }
   }
 }
+
+// main-screen
+
+.main-screen {
+  overflow: hidden;
+  img {
+    max-width: 85%;
+    border-radius: 15px;
+  }
+}
